@@ -66,7 +66,7 @@ $Department  = "Tecnologia da Informação"
 ##### TEMPLATE HTML #####
 #Importa o arquivo HTML da assinatura com os padrões predefinidos
 $FileHtml = "Signature.html"
-$SignatureHTML = Get-Content -Path $FileHtml -encoding utf8 -ReadCount 0
+$SignatureHTML = Get-Content -Path $FileHtml -ReadCount 0
 
 if (Test-Path -Path $SignatureHTML) {
 
@@ -100,14 +100,14 @@ if (Test-Path -Path $SignaturePlain) {
 	}
 }
 
-<#
+
 ##### CONFIGURAR ASSINATURA #####
 #Registra nova assinatura na caixa de e-mail do Outlook 365
 Set-MailboxMessageConfiguration -Identity $EmailAddress -AutoAddSignature $True -AutoAddSignatureOnReply $False -SignatureText $SignaturePlain -SignatureHTML $SignatureHTML
 
 Write-Host Assinatura adicionada para $EmailAddress -ForegroundColor Green
 
-
+<#
 $list = Get-MsolUser -DomainName 'engelmig.com.br' -All 
  foreach($user in $list) {
         $userPrincipalName     = $user.UserPrincipalName       #Armazena na variável $userPricipalName o e-mail do usuário
