@@ -1,5 +1,5 @@
 [DisplayName]
-[JobTitle]
+[JobTitle] [Department]
  
 Tel.: [TelephoneNo]
 Email: [EmailAddress]

@@ -68,13 +68,13 @@ $Department  = "Tecnologia da Informação"
 $FileHtml = "Signature.html"
 $SignatureHTML = Get-Content -Path $FileHtml -ReadCount 0
 
-if (Test-Path -Path $SignatureHTML) {
 
 	#Substitui as variaveis do arquivo html com os valores configurados
 	$SignatureHTML = $SignatureHTML.Replace("[DisplayName]", $DisplayName)
 	$SignatureHTML = $SignatureHTML.Replace("[JobTitle]", $JobTitle)
 	$SignatureHTML = $SignatureHTML.Replace("[TelephoneNo]", $TelephoneNo)
 	$SignatureHTML = $SignatureHTML.Replace("[EmailAddress]", $EmailAddress)
+	$SignatureHTML = $SignatureHTML.Replace("[Department]", $Department)
 	if ($MobileNo -like "") {
 	    $SignatureHTML = $SignatureHTML.Replace("[MobileNo]", "")
 	 }
@@ -82,12 +82,11 @@ if (Test-Path -Path $SignatureHTML) {
 	   $SignatureHTML = $SignatureHTML.Replace("[MobileNo]", $MobileNo)
 	}
 
-}
 
 ##### TEMPLATE TXT #####
 $FileTxt = "Signature.txt"
 $SignaturePlain = Get-Content -Path $FileTxt -encoding utf8 -ReadCount 0
-if (Test-Path -Path $SignaturePlain) {
+
 	$SignaturePlain = $SignaturePlain.Replace("[DisplayName]", $DisplayName)
 	$SignaturePlain = $SignaturePlain.Replace("[JobTitle]", $JobTitle)
 	$SignaturePlain = $SignaturePlain.Replace("[TelephoneNo]", $TelephoneNo)
@@ -98,7 +97,7 @@ if (Test-Path -Path $SignaturePlain) {
 	 else {
 	   $SignaturePlain = $SignaturePlain.Replace("[MobileNo]", $MobileNo)
 	}
-}
+
 
 
 ##### CONFIGURAR ASSINATURA #####

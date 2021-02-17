@@ -14,7 +14,7 @@ Após a migração de quase mil usuarios para plataforma do Microsoft Office 365
 * Modulo Powershell: `MSOnline`
 
 ## Como funciona
-Substitua o usuario e Senha com acesso de admin
+Substitua o usuario e Senha com acesso de administrador
 
 
 ## Preparação
@@ -26,7 +26,7 @@ Ative o protocolo tls confira se o repositorio está configurado, e instale o m�
 ## Templates
 Este script vem com dois arquivos de modelo. `Signature.html` contém a versão HTML e` Signature.txt` a versão simples de sua assinatura. A versão HTML é usada ao criar emails em HTML puro, e a versão texto ao criar emails de texto de plano. Certifique-se de sempre editar ambos os arquivos!
 
-All variables are enclosed in square brackets. A part of the signature contains static information (f.e. name of the company) and is marked by hashtags. Please edit the file accordingly.
+Todas as variáveis ​​estão entre colchetes. Uma parte da assinatura contém informações estáticas (por exemplo, nome da empresa) e é marcada por hashtags. Edite o arquivo de acordo.
 
 ## Como usar
 * Editar os arquivos de template `Signature.html` and `Signature.txt` com os dados que precisa.
